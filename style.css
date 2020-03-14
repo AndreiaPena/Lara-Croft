@@ -1,0 +1,1136 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: "tombraider";
+    font-weight: normal;
+	src: url('Tomb_Raider.ttf');
+}
+body {
+    font-family: 'Work Sans', sans-serif;
+    color: #000000;
+}
+h1 {
+    font-weight: normal;
+    font-size: 90px;
+    line-height: 80px;
+    font-family: 'Playfair Display', serif;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+}
+span {
+    font-weight: 600;
+}
+p {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: justify;
+    width: 45%;
+    color: #000000;
+}
+
+section {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/*********************************** header ***************************************/
+
+nav .logolara{
+    margin: 5px 0 0 20px;
+    display: inline-block;
+}
+
+nav {
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+nav li a {
+    color: #000;
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+}
+
+nav li a:hover,
+nav li a:focus,
+.menu__checkbox:hover,
+.menu__checkbox:focus,
+:focus {
+    background-color: #f4f4f4;
+}
+/* menu */
+.menu {
+    display: none;
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+/* menu icon */
+.menu__icon {
+    cursor: pointer;
+    display: block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.hamburger {
+    background: #333;
+    display: block;
+    height: 3px;
+    position: relative;
+    transition:.2s ease-out;
+    width: 30px;
+}
+
+.hamburger:before,
+.hamburger:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .5s ease-out;
+    width: 100%;
+}
+
+.hamburger:before {
+    top: 8px;
+}
+
+.hamburger:after {
+    top: -8px;
+}
+/* menu checkbox */
+.menu__checkbox {
+    opacity: 0;
+}
+
+.menu__checkbox:checked~.menu {
+    max-height: 400px;
+    display: block;
+}
+
+.menu__checkbox:focus~.menu__icon {
+    outline: #5E9ED6 1px solid;
+    background-color: #f4f4f4;
+}
+
+.menu__checkbox:checked~.menu__icon {
+    background-color: #f4f4f4;
+}
+
+.menu__checkbox:checked~.menu__icon .hamburger {
+    background: transparent;
+}
+
+.menu__checkbox:checked~.menu__icon .hamburger:before {
+    transform: rotate(-225deg);
+}
+
+.menu__checkbox:checked~.menu__icon .hamburger:after {
+    transform: rotate(225deg);
+}
+
+.menu__checkbox:checked~.menu__icon:not(.steps) .hamburger:before,
+.menu__checkbox:checked~.menu__icon:not(.steps) .hamburger:after {
+    top: 0;
+}
+/*********************************** NONE ***************************************/
+#top {
+      height: 6vh;
+}
+/*********************************** cover Lara Croft ***************************************/
+#cover {
+    width: 100%;
+    height: 94vh;
+    background: url(./images/cover_Lara.jpg) no-repeat center/ cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cover h1 { 
+    font-size: 100px;
+    color: #FFFFFF;
+    font-family: "tombraider", 'Work Sans', sans-serif;
+}
+
+#cover h2 {
+    padding-top:  50px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.015em;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+#cover a {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    color: #fff;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+    pointer-events:none;
+}
+
+#cover a {
+    padding-top: 70px;
+}
+
+#cover a span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 28px;
+    height: 28px;
+    margin-left: -12px;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    transform: rotate(-45deg);
+    animation: scr01 2s infinite;
+}
+
+@keyframes scr01 {
+    0% {
+      transform: rotate(-45deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(-45deg) translate(-20px, 20px);
+      opacity: 0;
+    }}
+/*********************************** Origin Story ***************************************/
+
+#originstory h3,
+#declin h3,
+#renaissance h3,
+#initiatives h3 {
+    padding-top: 96px;
+    font-size: 30px;
+    line-height: 30px;
+}
+#succession h3
+{
+    padding-top: 110px;
+    font-size: 30px;
+    line-height: 30px;
+}
+#originstory article,
+#declin article,
+#renaissance article,
+#succession article,
+#initiatives article{
+    padding-top: 49px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#originstory article a {
+transition: 0.25s;
+}
+
+#originstory article a:hover {
+    color:#4EC7C1 ;
+}
+
+#originstory .origincover {
+    width: 55%;
+    padding-top: 93px;
+    position: absolute;
+    right: 10%;
+    object-fit: cover;
+}
+/*********************************** carrousel ***********************************/
+.post-slider,
+.post-slider02,
+.post-slider03,
+.post-slider05 {
+    position: relative;
+    padding-top: 320px;
+}
+
+.post-slider .post-wrapper,
+.post-slider02 .post-wrapper02,
+.post-slider03 .post-wrapper03,
+.post-slider05 .post-wrapper05 {
+    position: absolute;
+    top:70%;
+    width: 573px;
+    height: 605px;
+    overflow: hidden;
+}
+
+.post-slider .post-wrapper .post,
+.post-slider02 .post-wrapper02 .post02,
+.post-slider03 .post-wrapper03 .post03,
+.post-slider05 .post-wrapper05 .post05 {
+    display: inline-block;
+    width: 100%;
+}
+
+.post-info,
+.post-info02,
+.post-info03,
+.post-info05 {
+   position: absolute;
+   bottom:0;
+   height: 120px;
+   width: 573px;
+   background: rgba(0, 0, 0, 0.7);
+   opacity: 0;
+   transition: ease 0.5s;
+}
+
+.post-info p,
+.post-info02 p,
+.post-info03 p,
+.post-info05 p {
+    width: 100%;
+    padding: 20px 30px;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: justify;
+    color: #FFFFFF;
+}
+
+.post:hover .post-info,
+.post02:hover .post-info02,
+.post03:hover .post-info03,
+.post05:hover .post-info05 {
+    opacity: 1;
+}
+
+.post-slider .next,
+.post-slider03 .next03 {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    cursor: pointer;
+    font-size: 3em;
+    transition: 0.5s;
+}
+
+.post-slider .previous,
+.post-slider03 .previous03 {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    font-size: 3em;
+    transition: 0.5s;
+}
+
+.post-slider .previous:hover,
+.post-slider .next:hover,
+.post-slider02 .previous02:hover, 
+.post-slider02 .next02:hover,
+.post-slider03 .previous03:hover, 
+.next03:hover,
+.post-slider05 .previous05:hover, 
+.next05:hover {
+    color: #4EC7C1;
+}
+/*********************************** texte origin story ***********************************/
+.originstory2,
+.renaissance2  {
+background: #1A313D;
+width: 100%;
+}
+
+.originstory2 article,
+.declin2 article,
+.succession2 article  {
+    padding-top: 400px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 150px;
+}
+
+.originstory2 hr,
+.declin2 hr,
+.renaissance2 hr,
+.succession2 hr {
+    width: 406px;
+    height: 7px;
+    background: #FFFFFF;
+    border: none;
+}
+
+.originstory2 h2,
+.declin2 h2,
+.renaissance2 h2,
+.succession2 h2 {
+    padding-top: 10px;
+    width: 60%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 36px;
+    color: #FFFFFF;
+    font-family: 'Playfair Display', serif;
+}
+
+.originstory2 p,
+.declin2 p,
+.renaissance2 p,
+.succession2 p{
+    color: #FFFFFF;
+}
+/*********************************** Le Déclin ***********************************/
+    
+#declin .declincover {
+    padding-top: 93px;
+    position: absolute;
+    left: 10%;
+    width: 55%;
+}
+/*********************************** carrousel declin et succession***********************************/
+
+.post-slider02 .post-wrapper02,
+.post-slider05 .post-wrapper05 {
+    right: 0; 
+}
+
+.post-info02 {
+   background: rgba(0, 0, 0, 0.8);
+}
+
+.post-info02 p,
+.post-info03 p {
+    padding: 15px 30px;
+}
+.post-info02 a {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.post-slider02 .next02,
+.post-slider05 .next05 {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    cursor: pointer;
+    font-size: 3em;
+    transition: 0.5s;
+}
+
+.post-slider02 .previous02,
+.post-slider05 .previous05 {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    cursor: pointer;
+    font-size: 3em;
+    transition: 0.5s;
+}
+
+/*********************************** texte le declin ***********************************/
+.declin2,
+.succession2 {
+    background: #4EC7C1;
+    width: 100%;
+}
+/*********************************** cover middle ***************************************/
+#cover2 {
+    width: 100%;
+    height: 100vh;
+    background: url(./images/cover_middle.jpg) no-repeat center/ cover;
+    position: relative;
+}
+
+#cover2 h1 { 
+    position: absolute;
+    right: 6%;
+    top: 50%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 75px;
+    color: #FFFFFF;
+    width: 60%;
+    letter-spacing: 0.020em;
+}
+
+#cover2 a {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    color: #fff;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+    pointer-events:none;
+    padding-top: 70px;
+}
+
+#cover2 a span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 28px;
+    height: 28px;
+    margin-left: -12px;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    transform: rotate(-45deg);
+    animation: scr01 2s infinite;
+}
+
+@keyframes scr01 {
+    0% {
+      transform: rotate(-45deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(-45deg) translate(-20px, 20px);
+      opacity: 0;
+    }
+}
+/*********************************** Renaissance ***********************************/
+   
+#renaissance .renaissancecover {
+    padding-top: 93px;
+    position: absolute;
+    right: 10%;
+    width: 55%;
+}
+/*********************************** texte renaissance ***********************************/
+   
+.renaissance2 article {
+    padding-top: 400px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.renaissance2 h2 {
+    line-height: 40px;
+}
+
+.button {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    margin: 0 auto;
+    padding-top:  40px;
+}
+
+.renaissance2 a {
+    padding: 17px;
+    width: 162px;
+    height: 52px;
+    cursor: pointer;
+    text-align: center;
+    border: 2px solid #FFFFFF;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #FFFFFF;
+    transition: 0.5s;
+}
+
+.renaissance2 a:hover{
+    border: 2px solid #1A313D;
+    background-color:#FFFFFF;
+    color: #1A313D;
+    font-weight: 600;
+}
+/*********************************** relooking ***********************************/
+#relooking {
+    background: #1A313D;
+    width: 100%;
+    height: 110vh;
+}
+
+#relooking h3 {
+    padding-top: 200px;
+    font-size: 30px;
+    line-height: 30px;
+    color: #FFFFFF;
+    width: 80%;
+    position: relative;
+    left: 10%;
+}
+#relooking h1 {
+    color: #FFFFFF;
+}
+
+#relooking article {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 79px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#relooking article p {
+    color: #FFFFFF;
+}
+    
+#relooking article a {
+    color: #FFFFFF;
+    transition: 0.25s;
+}
+    
+#relooking article a:hover {
+    color: #4EC7C1;
+}
+        
+#relooking .relookingcover { 
+    width: 100%;
+}
+   
+.evolution {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+/*********************************** Succession ***********************************/
+#succession {
+    margin-top: 600px;
+}
+   
+#succession .successioncover {
+    padding-top: 93px;
+    position: absolute;
+    left: 10%;
+    height: 100vh;
+}
+
+.nonesuccession {
+    padding-bottom: 350px;
+}
+/*********************************** Initiatives ***********************************/
+
+.video-responsive { 
+    overflow:hidden; 
+    padding-bottom:56.25%; 
+    position:relative; 
+    height:0;
+}
+
+.video-responsive iframe { 
+    left:0; 
+    top:0; 
+    height:100%; 
+    width:100%; 
+    position:absolute;
+    margin-top: 100px;
+}
+
+.noneinitiatives {
+    padding-bottom: 100px;
+}
+/*********************************** Annexes ***********************************/
+#annexes{
+    background: #1A313D;
+    width:100%;
+}
+
+#annexes h1{
+    padding-top: 96px;
+    text-align: center;
+    color: #FFFFFF;
+}
+    
+#annexes article{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 49px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+#annexes article hr{
+    width: 406px;
+    height: 7px;
+    background: #FFFFFF;
+    border: none;
+}
+
+#annexes article h2{
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 36px;
+    color: #FFFFFF;
+    font-family: 'Playfair Display', serif;
+    padding:10px 0 30px 0;
+}
+
+#annexes article a,.white{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    color: #FFFFFF;
+    padding-top: 30px;
+}
+
+#annexes article a{
+    position: relative;
+}
+
+#annexes article .lien{
+    width: 45.25%;
+}
+
+#annexes article .lien2{
+    width: 43.25%;
+}
+
+#annexes article a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+#annexes article a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+#annexes article .white{
+    width: 100%;
+}
+
+#annexes article span{
+    font-weight: 600;
+}
+
+.articles{
+    display: flex;
+    flex-direction: column;
+}
+
+#annexes div {
+    padding-top: 70px;
+}
+/*********************************** Footer ***********************************/
+footer{
+    background: #1A313D;
+    width:100%;
+}
+
+footer hr{
+    border: none;
+    height: 2px;
+    width: 87%;
+    margin: 0 auto;
+    background: #FFFFFF;
+}
+
+footer p{
+    color: #FFFFFF;
+    text-align: center;
+    width: 80%;
+    margin:0 auto;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+/*********************************** MEDIA ***********************************/
+/* 48em = 768px */
+@media (max-width: 68em) {
+    nav .logolara{
+        margin:0;
+    }
+}
+
+@media (min-width: 68em) {
+ 
+nav li {
+    float: left;
+}
+
+nav li a {
+    padding: 20px 30px;
+}
+
+.menu {
+    display: block;
+    clear: none;
+    float: right;
+    max-height: none;
+}
+
+.menu__icon,
+.menu__checkbox,
+.hamburger {
+    display: none;
+}
+}
+
+@media screen and (max-width:950px){
+         
+p {
+    font-size: 14px;
+    line-height: 25px;
+    width: 80%;
+}
+
+h1{
+    font-size: 70px;
+    text-align: center;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/*********************************** cover ***************************************/
+
+#cover h1{ 
+    font-size: 80px;
+}
+
+#cover h2 {
+    font-size: 20px;
+}
+/*********************************** Origin Story ***************************************/
+section {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#originstory,
+#declin,
+#renaissance{
+    height: auto;
+}
+
+#originstory h3,
+#declin h3,
+#renaissance h3,
+#succession h3,
+#initiatives h3,
+#relooking h3{
+    text-align: center;
+}
+
+#originstory article,
+#declin article,
+#renaissance article,
+#succession article,
+#initiatives article,
+#relooking article{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#originstory article p, 
+#declin article p,
+#renaissance article p,
+#succession article p,
+#relooking article p{
+    padding-top: 60px;
+}
+
+#originstory article a,
+#relooking article a {
+    pointer-events:none;
+}
+
+#originstory .origincover, 
+#declin .declincover,
+#renaissance .renaissancecover,
+#succession .successioncover{
+   display: none;
+}
+
+.nonesuccession,
+.nonerelooking{
+    display: none;
+}
+
+.succession2 article,
+.declin2 article,
+.originstory2 article{
+    padding-bottom: 0;
+}
+
+#relooking h3{ 
+    padding-top: 200px;
+}
+/*********************************** carrousel ***********************************/
+.post-slider,
+.post-slider02,
+.post-slider03,
+.post-slider05{
+    position: relative;
+    padding-top: 100px;
+}
+
+.post-slider .post-wrapper,
+.post-slider02 .post-wrapper02,
+.post-slider03 .post-wrapper03,
+.post-slider05 .post-wrapper05 {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+.post-slider .post-wrapper .post,
+.post-slider02 .post-wrapper02 .pos02,
+.post-slider03 .post-wrapper03 .post03,
+.post-slider05 .post-wrapper05 .post05{
+    display: inline-block;
+    width: auto;
+}
+
+.post-slider .post-wrapper .post img,
+.post-slider02 .post-wrapper02 .post02 img,
+.post-slider03 .post-wrapper03 .post03 img,
+.post-slider05 .post-wrapper05 .post05 img{
+    width: 100%;
+}
+
+.post-info,
+.post-info02,
+.post-info03, 
+.post-info05  { 
+   height: 100px;
+   width: 14.5%;
+   background: rgba(0, 0, 0, 0.9);
+   opacity: 1;
+}
+
+.post-info p,
+.post-info02 p,
+.post-info03 p,
+.post-info05 p{
+    position: static;
+    width: 100%;
+    height: 100px;
+    text-align: left;
+    color: white;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.post-slider .next,
+.post-slider02 .next02,
+.post-slider05 .next05 {
+    right: 1%;
+    top: 50%;
+    font-size: 1.5em;
+    text-align: right;
+    color: rgba(78, 199, 193, 0.7);
+    z-index: 1;
+}
+
+.post-slider .previous,
+.post-slider02 .previous02,
+.post-slider05 .previous05 {
+    left: 1%;
+    top: 50.5%;
+    font-size: 1.5em;
+    text-align: left;
+    color: rgba(78, 199, 193, 0.7);
+    z-index: 1;
+}
+
+.post-slider03 .previous03{
+    left: 1%;
+    top: 50.5%;
+    font-size: 1.5em;
+    text-align: left;
+    color: #1A313D;
+    z-index: 1;
+}
+
+.post-slider03 .next03{
+    right: 1%;
+    top: 50%;
+    font-size: 1.5em;
+    text-align: right;
+    color: #1A313D;
+    z-index: 1;
+}
+/*********************************** texte origin story ***********************************/
+.originstory2,
+.declin2,
+.renaissance2,
+.succession2 {
+    height: auto;
+}
+    
+.originstory2 article,
+.declin2 article,
+.renaissance2 article,
+.succession2 article {
+    padding-top: 100px;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.originstory2 hr,
+.declin2 hr,
+.renaissance2 hr,
+.succession2 hr{    
+    margin: 0 auto;
+    width: 200px;
+    height: 4px;
+}
+
+.originstory2 h2,
+.declin2 h2,
+.renaissance2 h2,
+.succession2 h2{
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.originstory2 p,
+.declin2 p,
+.renaissance2 p,
+.succession2 p{
+    padding: 50px 0;
+}
+/*********************************** cover middle ***************************************/
+#cover2 {
+    width: 100%;
+    height: 100vh;
+    background: url(./images/cover_middle.jpg) no-repeat left/ cover;
+    position: relative;
+}
+
+#cover2 h1{
+    position: static;
+    margin: 0 auto;
+    font-size:40px;
+    line-height: 50px;
+    width: 80%;
+    padding-top: 200px;
+}
+/*********************************** texte renaissance ***********************************/
+.renaissance2 a{
+    border: 2px solid #1A313D;
+    background-color:#FFFFFF;
+    color: #1A313D;
+    position: static;
+}
+
+.renaissance2 .button {
+    width:100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+/*********************************** relooking ***************************************/
+#relooking {
+    height: auto;
+}
+
+#relooking p{
+    width: 100%;
+}
+  
+.evolution {
+    width: 100%;
+}
+/*********************************** Succession ***********************************/
+#succession{
+    height: auto;
+    margin-top: 50px;
+}
+/*********************************** Initiatives ***********************************/
+#initiatives{
+    height: auto;
+}
+
+.video-responsive iframe { 
+    margin:0;
+}
+
+#initiatives article p{
+    padding: 60px 0;
+}
+/*********************************** Annexes ***********************************/
+#annexes{
+    height: auto;
+}
+
+#annexes article{
+    align-items: center;
+    justify-content: center;
+}
+
+#annexes article hr{
+    width: 200px;
+    height: 4px;
+    margin: 0 auto;
+}
+
+#annexes article h2{
+    margin: 0 auto;
+}
+
+#annexes article a,.white{
+    font-size: 14px;
+}
+
+#annexes article .lien,
+#annexes article .lien2{
+    width: 100%;
+    text-align: center;
+}
+
+.video, .images{
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    height: auto;
+    padding: 50px 0;
+} 
+}
